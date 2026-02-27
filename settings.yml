@@ -4,6 +4,7 @@ general:
   instance_name: "SearXNG Railway"
 
 server:
+  secret_key: "9xK3pL2vQ7tA4sM8ZcR1YwF6HnU5bE0D"
   limiter: false
   image_proxy: true
   method: "GET"
