@@ -1,0 +1,22 @@
+use_default_settings: true
+
+general:
+  instance_name: "SearXNG Railway"
+
+server:
+  limiter: false
+  image_proxy: true
+  method: "GET"
+
+valkey:
+  url: ${SEARXNG_REDIS_URL}
+
+search:
+  safe_search: 0
+  default_lang: "en"
+  formats:
+    - html
+    - json
+
+ui:
+  default_theme: simple
