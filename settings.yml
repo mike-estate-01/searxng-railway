@@ -1,4 +1,4 @@
-use_default_settings: false
+use_default_settings: true
 
 general:
   instance_name: "SearXNG Railway"
@@ -51,3 +51,28 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: true
+
+  - name: bing
+    engine: bing
+    shortcut: bi
+    disabled: true
+
+  - name: brave
+    engine: brave
+    shortcut: br
+    disabled: true
+
+  - name: mojeek
+    engine: mojeek
+    shortcut: mj
+    disabled: true
+
+  - name: qwant
+    engine: qwant
+    shortcut: qw
+    disabled: true
