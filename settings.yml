@@ -52,7 +52,7 @@ engines:
   - name: google scholar
     engine: google_scholar
     shortcut: gs
-    categories: science, general
+    disabled: true
 
   - name: wikipedia
     engine: wikipedia
