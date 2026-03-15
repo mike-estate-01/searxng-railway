@@ -1,6 +1,4 @@
-use_default_settings:
-  engines: false
-  settings: true
+use_default_settings: false
 
 general:
   instance_name: "SearXNG Railway"
@@ -10,12 +8,6 @@ server:
   limiter: false
   image_proxy: false
   method: "GET"
-
-botdetection:
-  ip_limit:
-    enabled: false
-  link_token:
-    enabled: false
 
 search:
   safe_search: 0
