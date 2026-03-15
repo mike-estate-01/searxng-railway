@@ -1,26 +1,28 @@
-use_default_settings: true
+use_default_settings:
+  engines: false
+  settings: true
+
 general:
   instance_name: "SearXNG Railway"
+
 server:
   secret_key: "9xK3pL2vQ7tA4sM8ZcR1YwF6HnU5bE0D"
-  limiter: true
+  limiter: false
   image_proxy: true
   method: "GET"
-valkey:
-  url: ${SEARXNG_REDIS_URL}
+
 search:
   safe_search: 0
   default_lang: "en"
   formats:
     - json
     - html
-ui:
-  default_theme: simple
-outgoing:
-  request_timeout: 6
-  max_request_timeout: 10
+
 engines:
-  # --- PRIMARY: Academic engines ---
+  - name: google
+    engine: google
+    shortcut: go
+
   - name: arxiv
     engine: arxiv
     shortcut: ax
@@ -37,11 +39,6 @@ engines:
     engine: google_scholar
     shortcut: gs
 
-  # --- SECONDARY: General fallback ---
-  - name: google
-    engine: google
-    shortcut: go
-
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
@@ -49,23 +46,3 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
-
-  # --- DISABLED ---
-  - name: mojeek
-    engine: mojeek
-    shortcut: mj
-    disabled: true
-
-  - name: qwant
-    engine: qwant
-    shortcut: qw
-    disabled: true
-
-  - name: duckduckgo
-    disabled: true
-
-  - name: brave
-    disabled: true
-
-  - name: startpage
-    disabled: true
