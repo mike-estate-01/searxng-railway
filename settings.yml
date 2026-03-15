@@ -27,30 +27,42 @@ engines:
   - name: google
     engine: google
     shortcut: go
+    categories: general
+
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    categories: general
 
   - name: arxiv
     engine: arxiv
     shortcut: ax
+    categories: science, general
 
   - name: semantic scholar
     engine: semantic_scholar
     shortcut: ss
+    categories: science, general
 
   - name: pubmed
     engine: pubmed
     shortcut: pm
+    categories: science, general
 
   - name: google scholar
     engine: google_scholar
     shortcut: gs
+    categories: science, general
 
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
+    categories: general
 
   - name: wikidata
     engine: wikidata
     shortcut: wd
+    categories: general
 
   - name: duckduckgo
     engine: duckduckgo
@@ -75,4 +87,9 @@ engines:
   - name: qwant
     engine: qwant
     shortcut: qw
+    disabled: true
+
+  - name: yahoo
+    engine: yahoo
+    shortcut: yh
     disabled: true
