@@ -95,15 +95,3 @@ engines:
     engine: yahoo
     shortcut: yh
     disabled: true
-```
-
-**Key changes:**
-- `request_timeout: 3` — each engine gets 3 seconds max
-- `max_request_timeout: 6` — SearXNG returns results within 6 seconds total
-- `timeout: 3` — per-engine timeout set individually
-
-This means SearXNG will always respond within 6 seconds — well under any n8n timeout threshold. Slow engines get cut off at 3 seconds and SearXNG returns whatever results it has collected so far.
-
-**Also add to your n8n Railway environment variables:**
-```
-N8N_DEFAULT_TIMEOUT=15000
