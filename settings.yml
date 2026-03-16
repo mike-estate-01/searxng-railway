@@ -20,49 +20,51 @@ ui:
   default_theme: simple
 
 outgoing:
-  request_timeout: 10
-  max_request_timeout: 20
+  request_timeout: 3
+  max_request_timeout: 6
 
 engines:
   - name: google
     engine: google
     shortcut: go
     categories: general
-
-  - name: startpage
-    engine: startpage
-    shortcut: sp
-    categories: general
+    timeout: 3
 
   - name: arxiv
     engine: arxiv
     shortcut: ax
     categories: science, general
+    timeout: 3
 
   - name: semantic scholar
     engine: semantic_scholar
     shortcut: ss
     categories: science, general
+    timeout: 3
 
   - name: pubmed
     engine: pubmed
     shortcut: pm
     categories: science, general
+    timeout: 3
 
-  - name: google scholar
-    engine: google_scholar
-    shortcut: gs
-    disabled: true
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    categories: general
+    timeout: 3
 
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
     categories: general
+    timeout: 3
 
   - name: wikidata
     engine: wikidata
     shortcut: wd
     categories: general
+    timeout: 3
 
   - name: duckduckgo
     engine: duckduckgo
@@ -93,3 +95,15 @@ engines:
     engine: yahoo
     shortcut: yh
     disabled: true
+```
+
+**Key changes:**
+- `request_timeout: 3` — each engine gets 3 seconds max
+- `max_request_timeout: 6` — SearXNG returns results within 6 seconds total
+- `timeout: 3` — per-engine timeout set individually
+
+This means SearXNG will always respond within 6 seconds — well under any n8n timeout threshold. Slow engines get cut off at 3 seconds and SearXNG returns whatever results it has collected so far.
+
+**Also add to your n8n Railway environment variables:**
+```
+N8N_DEFAULT_TIMEOUT=15000
