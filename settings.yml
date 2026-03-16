@@ -20,8 +20,8 @@ ui:
   default_theme: simple
 
 outgoing:
-  request_timeout: 6
-  max_request_timeout: 10
+  request_timeout: 10
+  max_request_timeout: 20
 
 engines:
   - name: google
