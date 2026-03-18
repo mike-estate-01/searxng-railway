@@ -1,7 +1,7 @@
 use_default_settings: true
 
 general:
-  instance_name: "SearXNG Railway"
+  instance_name: "SearXNG Academic"
 
 server:
   secret_key: "9xK3pL2vQ7tA4sM8ZcR1YwF6HnU5bE0D"
@@ -24,47 +24,46 @@ outgoing:
   max_request_timeout: 6
 
 engines:
-  - name: google
-    engine: google
-    shortcut: go
-    categories: general
-    timeout: 3
 
+  # ── ACTIVE ──────────────────────────────────────────────
   - name: arxiv
     engine: arxiv
     shortcut: ax
-    categories: science, general
+    categories: science
     timeout: 3
 
   - name: semantic scholar
     engine: semantic_scholar
     shortcut: ss
-    categories: science, general
+    categories: science
     timeout: 3
 
   - name: pubmed
     engine: pubmed
     shortcut: pm
-    categories: science, general
+    categories: science
     timeout: 3
+
+  # ── DISABLED ─────────────────────────────────────────────
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: true
 
   - name: startpage
     engine: startpage
     shortcut: sp
-    categories: general
-    timeout: 3
+    disabled: true
 
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
-    categories: general
-    timeout: 3
+    disabled: true
 
   - name: wikidata
     engine: wikidata
     shortcut: wd
-    categories: general
-    timeout: 3
+    disabled: true
 
   - name: duckduckgo
     engine: duckduckgo
