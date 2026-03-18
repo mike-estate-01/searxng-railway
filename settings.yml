@@ -24,26 +24,31 @@ outgoing:
   max_request_timeout: 12
 
 engines:
-  - name: google
-    engine: google
-    shortcut: go
+
+  # ── ACTIVE ──────────────────────────────────────────────
+  - name: startpage
+    engine: startpage
+    shortcut: sp
     categories: general
     timeout: 6
-    disabled: false
 
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
     categories: general
     timeout: 6
-    disabled: false
 
   - name: wikidata
     engine: wikidata
     shortcut: wd
     categories: general
     timeout: 6
-    disabled: false
+
+  # ── DISABLED ─────────────────────────────────────────────
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: true
 
   - name: duckduckgo
     engine: duckduckgo
@@ -60,7 +65,17 @@ engines:
     shortcut: br
     disabled: true
 
-  - name: startpage
-    engine: startpage
-    shortcut: sp
+  - name: mojeek
+    engine: mojeek
+    shortcut: mj
+    disabled: true
+
+  - name: qwant
+    engine: qwant
+    shortcut: qw
+    disabled: true
+
+  - name: yahoo
+    engine: yahoo
+    shortcut: yh
     disabled: true
